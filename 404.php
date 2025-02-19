@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
     h1 {
         color: #FF0000;
         font-size: 54px;
@@ -20,7 +20,7 @@
         height: 80vh;
         text-align: center;       
     }
-</style>
+</style> -->
 
 <?php get_header(); ?>
 <div class="error-screen">

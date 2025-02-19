@@ -1,11 +1,6 @@
 
 <style>
-    footer {
-        position: fixed;     /* Pin to a fixed location */
-  bottom: 0;           /* Align to bottom of the viewport */
-  left: 0;
-  width: 100%;
-    }
+
 </style>
 <footer>
   <div class="footer-container">

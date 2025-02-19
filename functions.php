@@ -2,6 +2,13 @@
 
 function theme_styles_and_scripts() {
 
+    wp_enqueue_style(
+        'idm-main', // Handle for the stylesheet
+        get_template_directory_uri() . '/dist/styles/main.css', // Path to the stylesheet
+        [], // No dependencies
+        filemtime(get_template_directory() . '/dist/styles/main.css') // Cache-busting by file modification time
+    );
+
 }
 
 add_action('wp_enqueue_scripts', 'theme_styles_and_scripts');
