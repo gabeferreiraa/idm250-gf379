@@ -1,16 +1,14 @@
-
-<style>
-
-</style>
-<footer>
+<footer class="site-footer">
   <div class="footer-container">
-    <nav class="footer">
-    <ul>
-        <li><a href="#">Lorem</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <p>&copy; <?php echo date("Y"); ?> Your Website Name. All rights reserved.</p>
+    <nav class="footer-nav">
+      <?php
+      wp_nav_menu( array(
+        'theme_location' => 'footer-menu',
+        'menu_class'     => 'footer-menu',
+        'container'      => false,
+      ) );
+      ?>
     </nav>
   </div>
 </footer>

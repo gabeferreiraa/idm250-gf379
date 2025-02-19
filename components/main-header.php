@@ -7,11 +7,12 @@
   <nav class="header">
     <ul>
 
-      <li class="logo"><a href="#home">Logo</a></li>
+      <li class="logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Logo</a></li>
 
-      <li><a href="#whatwedo">What we do</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+         <?php
+    wp_nav_menu( [ 
+        'theme_location' => 'primary-menu',  
+    ]);
+?>
     </ul>
   </nav>
