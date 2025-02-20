@@ -93,3 +93,8 @@ nav a:hover {
 .archive-post-list li a:hover {
   color: #005177;
 }
+.content-wrapper {
+  margin: 0 auto;
+
+  padding: 40px;
+}
