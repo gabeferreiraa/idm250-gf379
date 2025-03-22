@@ -1,65 +1,69 @@
-/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Use Oswald as the primary font, set base size to 22px */
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Oswald", sans-serif;
   font-size: 22px;
-  background-color: #f8f8f8; /* Light gray background for readability */
-  color: #333; /* Dark text for contrast */
+  background-color: #f8f8f8;
+  color: #333;
 }
 
-/* Navbar container */
 nav {
-  background-color: #333; /* dark background */
+  background-color: #333;
   padding: 2.5rem 2rem;
+  max-width: 100%;
 }
 
 .footer {
-  background-color: #333; /* dark background */
+  background-color: #333;
   padding: 1.5rem 2rem;
+  color: #ddd;
+  max-width: 100%;
 }
 
-/* Unordered list to hold nav links */
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
-/* Logo list item */
 li.logo {
   margin-right: auto;
   color: #fff;
   font-weight: 700;
 }
 
-/* Nav links list items */
 nav li {
   margin-left: 1.5rem;
 }
 
-/* Link styles */
 nav a {
   text-decoration: none;
   color: #fff;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Featured image styles */
 .featured-image-container {
   position: relative;
   display: inline-block;
   width: 100%;
+  max-width: 100%;
 }
 
 .featured-image img {
@@ -73,13 +77,11 @@ nav a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
 }
 
-/* Main content wrapper */
 .content-wrapper {
   margin: 40px auto;
   padding: 40px;
@@ -90,7 +92,6 @@ nav a:hover {
   border-radius: 8px;
 }
 
-/* Headings */
 .content-wrapper h1,
 .content-wrapper h2,
 .content-wrapper h3,
@@ -129,14 +130,12 @@ nav a:hover {
   font-size: 1rem;
 }
 
-/* Paragraph styling */
 .content-wrapper p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
-/* Inline styles */
 .content-wrapper strong {
   font-weight: 700;
 }
@@ -154,7 +153,6 @@ nav a:hover {
   color: #005177;
 }
 
-/* Lists */
 .content-wrapper ul,
 .content-wrapper ol {
   margin: 1rem 0;
@@ -172,9 +170,9 @@ nav a:hover {
 .content-wrapper ul li,
 .content-wrapper ol li {
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
-/* Buttons */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -192,7 +190,11 @@ nav a:hover {
   background-color: #005177;
 }
 
-/* Pull Quote */
+.button:focus {
+  outline: 2px solid #005177;
+  outline-offset: 2px;
+}
+
 .pull-quote {
   font-size: 1.5rem;
   font-style: italic;
@@ -203,7 +205,6 @@ nav a:hover {
   margin: 1.5rem 0;
 }
 
-/* Image with caption */
 .content-wrapper figure {
   margin: 2rem 0;
   text-align: center;
@@ -218,16 +219,20 @@ nav a:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.content-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
 .content-wrapper figcaption {
   font-size: 0.9rem;
   color: #666;
   margin-top: 0.5rem;
 }
 
-/* Embedded Video */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -244,8 +249,123 @@ nav a:hover {
   border-radius: 8px;
 }
 
-/* Responsive Adjustments */
+.home-content {
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.home-title {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 40px;
+  width: 100%;
+}
+
+.error-screen {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.error-code {
+  font-size: 64px;
+  color: #f00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.error-screen h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #1d3557;
+}
+
+.archive-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.archive-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1d3557;
+}
+
+.archive-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.archive-post-item {
+  margin-bottom: 20px;
+}
+
+.archive-post-link {
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.archive-post-link:hover {
+  color: #1d3557;
+  text-decoration: underline;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.no-posts {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+}
+
 @media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav li {
+    margin-left: 1rem;
+  }
+
   .content-wrapper {
     padding: 20px;
   }
@@ -268,5 +388,35 @@ nav a:hover {
 
   .pull-quote {
     font-size: 1.25rem;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .error-screen {
+    padding: 60px 15px;
+  }
+
+  .error-code {
+    font-size: 48px;
+  }
+
+  .error-screen h1 {
+    font-size: 22px;
+  }
+
+  .home-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .archive-title {
+    font-size: 28px;
+  }
+
+  .archive-post-link {
+    font-size: 18px;
   }
 }

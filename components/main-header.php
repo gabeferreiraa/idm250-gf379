@@ -7,7 +7,7 @@
   <nav class="header">
     <ul>
 
-      <li class="logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Logo</a></li>
+      <li class="logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>">BluePeak Construction</a></li>
 
          <?php
     wp_nav_menu( [ 
